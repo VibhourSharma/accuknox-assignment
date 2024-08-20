@@ -39,34 +39,12 @@
             "May": 209,
             "June": 214
           }
-        },
-        {
-          "title": "Workload Alerts",
-          "type": "line",
-          "data": {
-            "July": 186,
-            "Aug": 205,
-            "Sept": 137,
-            "Oct": 73,
-            "Nov": 209,
-            "Dec": 150
-          }
         }
       ]
     },
     {
       "name": "Security Dashboard",
       "widgets": [
-        {
-          "title": "Vulnerabilities by Severity",
-          "type": "bar",
-          "data": {
-            "Critical": 22,
-            "High": 47,
-            "Medium": 103,
-            "Low": 250
-          }
-        },
         {
           "title": "Security Incidents",
           "type": "pie",
