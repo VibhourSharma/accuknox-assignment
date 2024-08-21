@@ -41,8 +41,6 @@ export default function Dashboard() {
     );
   });
 
-  console.log("Categories in Dashboard:", categories);
-
   return (
     <div className="min-h-screen bg-gray-100 p-4">
       <Header />

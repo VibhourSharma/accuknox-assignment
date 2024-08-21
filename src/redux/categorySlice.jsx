@@ -46,7 +46,6 @@ const CategorySlice = createSlice({
         state.isWidgetModalOpen = false;
         state.newWidgetName = "";
         state.selectedCategoryId = null;
-        console.log("widget added");
       }
     },
 
@@ -73,7 +72,6 @@ const CategorySlice = createSlice({
       state.categories.unshift(newCategory);
       state.isCategoryModalOpen = false;
       state.newCategoryName = "";
-      console.log("category added");
     },
 
     deleteCategory(state, action) {
