@@ -86,6 +86,16 @@ const CategorySlice = createSlice({
     setSearchQuery(state, action) {
       state.searchQuery = action.payload;
     },
+    toggleWidgetVisibility: (state, action) => {
+      const { categoryId, widgetId } = action.payload;
+      const category = state.categories.find((cat) => cat.id === categoryId);
+      if (category) {
+        const widget = category.widgets.find((wid) => wid.id === widgetId);
+        if (widget) {
+          widget.hidden = !widget.hidden;
+        }
+      }
+    },
   },
 });
 
@@ -100,6 +110,7 @@ export const {
   addCategory,
   deleteCategory,
   setSearchQuery,
+  toggleWidgetVisibility,
 } = CategorySlice.actions;
 
 export default CategorySlice.reducer;

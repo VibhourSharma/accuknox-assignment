@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 import AddBtn from "../ui/AddBtn";
 import NameModal from "../ui/NameModal";
+import CategoriesModal from "../ui/CategoriesModal";
 import {
   selectCategory,
   setCategoryModalOpen,
@@ -12,10 +14,15 @@ const Header = () => {
   const isCategoryModalOpen = useSelector(
     (state) => state.categories.isCategoryModalOpen
   );
+  const [isCategoriesModalOpen, setIsCategoriesModalOpen] = useState(false);
 
   const handleAddCategoryClick = () => {
     dispatch(setCategoryModalOpen(true));
     dispatch(selectCategory(null));
+  };
+
+  const handleCategoriesButtonClick = () => {
+    setIsCategoriesModalOpen(!isCategoriesModalOpen);
   };
 
   return (
@@ -37,18 +44,23 @@ const Header = () => {
           />
         </div>
         <AddBtn
+          className="px-4 py-2 text-sm font-semibold text-gray-600 bg-gray-200 rounded-md"
+          name="Categories"
+          onClick={handleCategoriesButtonClick}
+        />
+        <AddBtn
           className="px-4 py-2 text-sm font-semibold text-white bg-purple-600"
           name="Add category"
           onClick={handleAddCategoryClick}
-        />
-        <AddBtn
-          className="px-4 py-2 text-sm font-semibold text-gray-600 bg-gray-200 rounded-md"
-          name="Categories"
         />
         <NameModal
           heading="Category"
           isOpen={isCategoryModalOpen}
           onClose={() => dispatch(setCategoryModalOpen(false))}
+        />
+        <CategoriesModal
+          isOpen={isCategoriesModalOpen}
+          onClose={() => setIsCategoriesModalOpen(false)}
         />
       </div>
     </header>
