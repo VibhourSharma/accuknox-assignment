@@ -7,7 +7,7 @@ import {
   selectCategory,
   deleteWidget,
   deleteCategory,
-} from "@/redux/CategorySlice";
+} from "@/redux/categorySlice";
 import AddBtn from "../ui/AddBtn";
 import DeleteBtn from "../ui/DeleteBtn";
 

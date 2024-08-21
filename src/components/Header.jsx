@@ -7,7 +7,7 @@ import {
   selectCategory,
   setCategoryModalOpen,
   setSearchQuery,
-} from "../redux/CategorySlice";
+} from "../redux/categorySlice";
 
 const Header = () => {
   const dispatch = useDispatch();

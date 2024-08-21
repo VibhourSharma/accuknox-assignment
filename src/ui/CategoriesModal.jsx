@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
-import { selectCategory, toggleWidgetVisibility } from "@/redux/CategorySlice";
+import { selectCategory, toggleWidgetVisibility } from "@/redux/categorySlice";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 
 const CategoriesModal = ({ isOpen, onClose }) => {

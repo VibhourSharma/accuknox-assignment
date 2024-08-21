@@ -4,7 +4,7 @@ import {
   setNewCategoryName,
   addWidget,
   addCategory,
-} from "@/redux/CategorySlice";
+} from "@/redux/categorySlice";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 
 export default function NameModal({ heading, isOpen, onClose }) {
