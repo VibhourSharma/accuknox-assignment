@@ -34,6 +34,12 @@ Use the checkboxes next to each widget to toggle its visibility on the dashboard
 Deleting Categories and Widgets
 To delete a category, click the Delete button next to the category.
 To delete a widget within a category, click the Delete button next to the widget.
+
+## Project Links
+
+- **GitHub Repository**: [https://github.com/VibhourSharma/accunox-assignment](https://github.com/VibhourSharma/accunox-assignment)
+- **Live Demo**: [https://accunox-assignmnet-by-vibhour.netlify.app/](https://accunox-assignmnet-by-vibhour.netlify.app/)
+
   
 ## Tech Stack
 
