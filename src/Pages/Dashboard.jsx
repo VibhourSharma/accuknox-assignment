@@ -34,7 +34,7 @@ export default function Dashboard() {
 
   const filteredCategories = categories.filter((category) => {
     return (
-      category.widgets.length === 0 || // Include categories with no widgets
+      category.widgets.length === 0 ||
       category.widgets.some((widget) =>
         widget?.title?.toLowerCase().includes(searchQuery.toLowerCase())
       )
@@ -60,24 +60,30 @@ export default function Dashboard() {
                 <DeleteBtn onClick={() => handleDeleteCategory(category.id)} />
               </div>
               <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {category.widgets.map((widget) => (
-                  <div
-                    key={widget.id}
-                    className="relative p-4 bg-gray-50 rounded-lg shadow"
-                  >
-                    <Widgets widget={widget} />
-                    <DeleteBtn
-                      onClick={() => handleDeleteWidget(category.id, widget.id)}
-                      className="absolute top-2 right-2"
+                {category.widgets
+                  .filter((widget) => !widget.hidden)
+                  .map((widget) => (
+                    <div
+                      key={widget.id}
+                      className="relative p-4 bg-gray-50 rounded-lg shadow"
+                    >
+                      <Widgets widget={widget} />
+                      <DeleteBtn
+                        onClick={() =>
+                          handleDeleteWidget(category.id, widget.id)
+                        }
+                        className="absolute top-2 right-2"
+                      />
+                    </div>
+                  ))}
+                <div className="flex items-center justify-center p-4 bg-gray-50 rounded-lg shadow">
+                  <div className="min-w-64 min-h-64 flex items-center justify-center">
+                    <AddBtn
+                      onClick={() => handleAddWidgetClick(category.id)}
+                      className="px-4 py-2 text-sm font-semibold text-gray-600 bg-gray-200"
+                      name="Add widget"
                     />
                   </div>
-                ))}
-                <div className="flex items-center justify-center p-4 bg-gray-50 rounded-lg shadow">
-                  <AddBtn
-                    onClick={() => handleAddWidgetClick(category.id)}
-                    className="px-4 py-2 text-sm font-semibold text-gray-600 bg-gray-200"
-                    name="Add widget"
-                  />
                 </div>
               </div>
             </section>
