@@ -2,9 +2,11 @@
   "categories": [
     {
       "name": "CNAPP Dashboard",
+      "id": 1724185994250,
       "widgets": [
         {
           "title": "Cloud Accounts",
+          "id": 1724186049004,
           "type": "pie",
           "data": {
             "Connected": 2,
@@ -16,6 +18,7 @@
         {
           "title": "Cloud Account Risk Assessment",
           "type": "bar",
+          "id": 1724186049739,
           "data": {
             "Failed": 2000,
             "Warning": 4000,
@@ -27,10 +30,12 @@
     },
     {
       "name": "CWPP Dashboard",
+      "id": 1724186050182,
       "widgets": [
         {
           "title": "Top 5 Namespace Specific Alerts",
           "type": "line",
+          "id": 1724186050449,
           "data": {
             "Jan": 186,
             "Feb": 305,
@@ -44,10 +49,12 @@
     },
     {
       "name": "Security Dashboard",
+      "id": 1724186050691,
       "widgets": [
         {
           "title": "Security Incidents",
           "type": "pie",
+          "id": 1724186057659,
           "data": {
             "Resolved": 15,
             "In Progress": 8,
