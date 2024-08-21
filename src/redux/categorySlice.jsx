@@ -3,7 +3,7 @@ import widgetsData from "@/data/widgetsData.json";
 
 const generateId = () => new Date().getTime();
 
-const CategorySlice = createSlice({
+const categorySlice = createSlice({
   name: "categories",
   initialState: {
     categories: widgetsData.categories,
@@ -109,6 +109,6 @@ export const {
   deleteCategory,
   setSearchQuery,
   toggleWidgetVisibility,
-} = CategorySlice.actions;
+} = categorySlice.actions;
 
-export default CategorySlice.reducer;
+export default categorySlice.reducer;
